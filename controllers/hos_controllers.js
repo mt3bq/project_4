@@ -9,17 +9,18 @@ const express = require('express');
 const app=express();
 app.use(upload());
 
+
 let client= new oc({
-   url:"http://ec2-3-83-82-162.compute-1.amazonaws.com:8042",
+    url:"http://ec2-3-83-82-162.compute-1.amazonaws.com:8042",
+    // url:"http://127.0.0.1:8042",
    auth: {
-      username: 'muteb',
-      password: 'muteb'
-    }
+       username: 'muteb',
+        password: 'muteb'
+      }
     
     
-
-});
-
+  
+  });
 
 
 

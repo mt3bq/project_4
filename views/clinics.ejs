@@ -14,69 +14,7 @@
 
 
 
-            <div class="box_filter" >
-                
-                <div class="search_ar">
-                    <label for="CLINICS">CLINICS </label>
-                    <input type="search">
-                </div>
-                
-
-                
-                <div class="box_2">
-                    
-                       <label for="health practitioner">Specialization</label>
-                       <select name="Specialization">
-                        <optgroup label="Specialization">
-                            <% if(user.length!=0){
-                                var i=1;
-                                user.forEach(function(data){
-                                %> 
-                          <option id="Specialization" value="Specialization"><%=data.Specialization%></option>
-                          
-                          <%  i++; }) %>
-                         
-                        </optgroup>
-                        
-                      </select>
-                  
-                  
-
-                    
-    <% } else{ %>
-         <p></p>
-    <% } %>
-
-                    
-                </div>
-                
-                  
-                  <div class="box_3">
-                    <label for="health practitioner">Clinic</label>
-                       <select name="Clinic">
-                        <optgroup label="Clinic">
-                            <% if(user.length!=0){
-                                var i=1;
-                                user.forEach(function(data){
-                                %> 
-                          <option id="Clinic" value="Clinic"><%=data.Clinic%></option>
-                          
-                          <%  i++; }) %>
-                         
-                        </optgroup>
-                        
-                      </select>
-                  
-                  
-
-                    
-    <% } else{ %>
-         <p></p>
-    <% } %>
-                  </div>
-                  
-            </div>
-
+            
 
 
 
@@ -101,7 +39,7 @@
 
                 <div class="box_add_clinic">
 
-                    <form class="row g-3 p-20">
+  <form class="row g-3 p-20 mp-20">
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Clinic Name</label>
     <input type="text" class="form-control"  name="Clinic_name" >
@@ -131,9 +69,11 @@
   <div class="col-12">
     <div class="btn_style_01">
                     <button style="color: white; background-color: rgba(30, 30, 139, 0.705);">Save</button>
-                    <button class="btn3" onclick="close__boc_add_clicics()">Close</button>
+                   
+                   
                     </div>
   </div>
+  
 </form>
  
 
@@ -143,7 +83,9 @@
   
 
                    
-
+<div class="cansel_btn">
+  <i   onclick="close__boc_add_clicics()" class="fa-solid fa-xmark"></i>
+    </div>
 
 
                     

@@ -299,8 +299,9 @@ border-radius: 7px;
     display: flex;
     flex-direction: column;
     row-gap: 5px;
-    width: 25%;
+    width: 27%;
     height: 66px;
+    padding-left: 10px;
   
 }
 .box_filter .search_ar input{
@@ -359,20 +360,29 @@ border-radius: 7px;
 }
 .content .btn_style{
     display: flex;
-    width: 100%;
+    width: 90%;
     justify-content: space-around;
     padding-top: 7%;
     align-items: center;
 }
 .content .btn_style .session_1{
     display: flex;
-    width: 35%;
+    width: 100%;
+    
     align-items: center;
     justify-content: space-around;
 }
+.content .btn_style .session_1 button{
+    width: 35%;
+    height: 50px;
+    background-color:#796eff;;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
 .content .btn_style button{
     width: 35%;
-    height: 40px;
+    height: 50px;
     background-color:#796eff;;
     border: none;
     border-radius: 7px;
@@ -408,6 +418,7 @@ border-radius: 7px;
 }
 .box_1 .titel_1{
     text-align: center;
+    padding-top: 15px;
 }
 .box_1 .session_box{
     display: flex;
@@ -431,10 +442,13 @@ border-radius: 7px;
     display: flex;
     justify-content: space-around;
     padding-top: 5px;
-    width: 100%;
+    width: 90%;
+    margin: auto;
+    align-items: center;
 }
 .box_1 .session_box .time_box .data_form input{
     height: 40px;
+    width: 40%;
 }
 .box_1 .session_box .time_box .time{
     display: flex;
@@ -697,9 +711,214 @@ overflow: scroll;
         flex-direction: column;
         
     }
-    
+    .head{
+       
+        padding-bottom:20%;
+        margin-top: 5%;
+       
+        
+    }
+    .head .ball h4{
+        display: none;
+    } 
+    .content .box_filter{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .content .box_filter .search_ar{
+        width: 90%;
+    }
+
+    .content .box_filter .box_2{
+        width: 90%;
+    }
+
+    .content .box_filter .box_3{
+        width: 90%;
+    }
+    .content .session_1 h3{
+        display: none;
+    }
+    .content .btn_style{
+        
+        flex-direction: column;
+        row-gap: 20px;
+        width: 100%;
+
     
 }
+.box_1 .session_box{
+    flex-direction: column;
+}
+.box_1 .session_box .time_box {
+    width: 95%;
+    margin: auto;
+   
+}
+.box_1 .session_box .select_doc{
+    width: 95%;
+    height: 400px;
+   margin: auto;
+   margin-top: 15px;
+}
+    .content .btn_style .session_1 {
+        display: flex;
+        width: 100%;
+        height: 30px;
+        }
+        .content .btn_style .session_1 button{
+            height: 42px;
+            width: 50%;
+        }
+        .content .btn_style .session_1 button{
+            height: 42px;
+            width: 50%;
+        }
+    
+        .content .btn_style button {
+            width: 50%;
+            height: 42px;
+           
+        }
+        .content .box_se{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        }
+        .content .box_se form{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            row-gap: 10px;
+            align-items: center;
+     
+            
+        }
+        .content .box_se input[type=search]{
+            width: 100%;
+        }
+        .content .box_se input[type=submit]{
+            width: 50%;
+        }
+
+        .content .box_1 {
+            margin-top: 5px;
+            width: 100%;
+            height: 80%;
+        }
+    
+        .content .box_1 .session_box .time_box{
+
+        }
+        .content .box_1 .session_box .time_box .data_form{
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin: auto;
+            text-align: center;
+        }
+        .content .box_1 .session_box .time_box .data_form input{
+            width: 100%;
+        }
+}
+
+
+@media(max-width:450px){
+    .head{
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 20px;
+        width: 100%;
+        padding-bottom:20%;
+        margin-top: 5%;
+       
+        
+    }
+
+    .head .search_ar{
+        width: 90%;
+        
+    }
+    .head .search_ar input{
+        width: 70%;
+        height: 35px;
+    }
+    .head .search_ar button{
+        width: 30%;
+        height: 35px;
+    }
+    .head .ball{
+        width: 100%;
+        justify-content: space-around;
+    }
+    .content .session_1 h3{
+        display: none;
+    }
+
+    .content .btn_style {
+        
+        flex-direction: column;
+        row-gap: 20px;
+        width: 100%;
+        margin-top: 25px;
+
+    
+}
+.content .btn_style .session_1 {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    }
+    .content .btn_style .session_1 button{
+        height: 42px;
+        width: 50%;
+    }
+    .content .btn_style .session_1 button{
+        height: 42px;
+        width: 50%;
+    }
+
+    .content .btn_style button {
+        width: 50%;
+        height: 42px;
+       
+    }
+    .content .box_se{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .content .box_se form{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        row-gap: 10px;
+        align-items: center;
+ 
+        
+    }
+    .content .box_se input[type=search]{
+        width: 100%;
+    }
+    .content .box_se input[type=submit]{
+        width: 50%;
+    }
+
+    .content .reg_box_2{
+        margin-top: 200px;
+        width: 95%;
+    }
+    .row {
+        flex-direction: column;
+    }
+
+} 
 
 @media (min-width:1300px) {
         

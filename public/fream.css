@@ -14,6 +14,9 @@
     margin: 20px;
 }
 
+.mp-20{
+    margin-top: 20px;
+}
 .wd-100{
     width: 100%;
 }
@@ -34,4 +37,9 @@
 }
 .ul_none{
     list-style: none;
+}
+
+.col_form{
+    display: flex;
+    flex-direction: column;
 }
