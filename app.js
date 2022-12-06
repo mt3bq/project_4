@@ -19,7 +19,8 @@ app.set('view engine','ejs');
 app.use(express.static('public'))
 
 let client= new oc({
- url:"http://ec2-3-83-82-162.compute-1.amazonaws.com:8042",
+ 
+ url:"http://ec2-54-162-64-196.compute-1.amazonaws.com:8042",
   // url:"http://127.0.0.1:8042",
  auth: {
    username: 'muteb',
