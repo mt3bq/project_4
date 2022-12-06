@@ -53,7 +53,7 @@ routes.get('/clinics',hos_controller.cheek,hos_controller.clinics_get);
   routes.get('/Radiology',hos_controller.cheek,hos_controller.Radiology_get)
   
 
-
+ 
 
 
 
@@ -62,6 +62,9 @@ routes.get('/clinics',hos_controller.cheek,hos_controller.clinics_get);
         routes.post('/Radiology',hos_controller.cheek,hos_controller.Radiology_post)
       //
      
+      //Schedul_Timing_get
+
+      routes.get('/SchedulTiming',hos_controller.Schedul_Timing_get);
 
       //page of x_ray_employ
 

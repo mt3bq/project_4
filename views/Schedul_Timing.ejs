@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./sup/headr.ejs')%>
+
+<body>
+    <div class="page  d-felx">
+        <%- include('./sup/dasebord.ejs')%>
+        <div class="content">
+
+           <%- include('./sup/user_options.ejs') %> 
+           
+
+           
+            <div class="btn_style">
+            <div class="session_1">
+                
+            <button class="btn" onclick="show_reg()">Process Selction</button>
+            </div>
+            
+         
+            </div>
+
+            <div class="box_1">
+               <div class="titel_1">
+                <h1>Doctor Schedual</h1>
+               </div>
+
+                <div class="session_box">
+                    <div class="time_box">
+                        <div class="data_form">
+                            <p>Data form</p>
+                        <input type="date" name="data_start" id="">
+                        <p>to</p>
+                        <input type="date" name="data_end" id="">
+                        </div>
+                        <div class="time">
+                            <p>Sunday</p>
+                            <input type="time" name="data_start" id="">
+                            <p>to</p>
+                            <input type="time" name="data_end" id="">
+                            </div>
+                            
+                            <div class="time">
+                            <p>Monday</p>
+                            <input type="time" name="data_start" id="">
+                            <p>to</p>
+                            <input type="time" name="data_end" id="">
+                            </div>
+                            
+                            <div class="time">
+                            <p>Tuesday</p>
+                            <input type="time" name="data_start" id="">
+                            <p>to</p>
+                            <input type="time" name="data_end" id="">
+                            </div>
+                            
+                            <div class="time">
+                            <p>Wednesday</p>
+                            <input type="time" name="data_start" id="">
+                            <p>to</p>
+                            <input type="time" name="data_end" id="">
+                            </div>
+
+                            <div class="time">
+                                <p>Thursday</p>
+                                <input type="time" name="data_start" id="">
+                                <p>to</p>
+                            <input type="time" name="data_end" id="">
+                                </div>
+
+                                <div class="time">
+                                    <p>Friday</p>
+                                    <input type="time" name="data_start" id="">
+                                    <p>to</p>
+                                    <input type="time" name="data_end" id="">
+                            </div>
+
+                            <div class="time">
+                                <p>Saturday</p>
+                                <input type="time" name="data_start" id="">
+                                <p>to</p>
+                                <input type="time" name="data_end" id="">
+                        </div>
+
+                       
+                         
+                            
+                    </div>
+
+                    <div class="select_doc">
+
+                      
+                        <% if(user.length!=0){
+                            var i=1;
+                            user.forEach(function(data){
+                            %> 
+                        <label for="<%=data.first_name%>" class="cheek_box">
+                            <input type="checkbox" name="dr_name" id="<%=data.first_name%>">
+                            
+                            <p><%= `${data.first_name}  ${data.se_name}  ${data.list_name}`%></p>
+                            
+                        </label>
+                        <%  i++; }) %>
+                        
+        <% } else{ %>
+             <p></p>
+        <% } %>
+
+
+
+        
+            
+               
+                       
+                       
+                        
+                     
+    </div>
+    <div class="btn_style_01">
+            <button style="color: white; background-color: rgba(30, 30, 139, 0.705);" class="btn3" >Save</button>
+            
+            </div>
+               
+           </div>
+           <div class="cansel_btn">
+            <i   onclick="close_form()" class="fa-solid fa-xmark"></i>
+              </div> 
+                    </div>
+               
+
+
+
+
+
+
+
+
+
+
+
+           
+
+
+
+
+
+
+          
+    
+    <script src="main.js"></script>
+
+    
+   
+
+</body>
+</html>

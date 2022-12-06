@@ -12,7 +12,7 @@ app.use(upload());
 
 let client= new oc({
     url:"http://ec2-3-83-82-162.compute-1.amazonaws.com:8042",
-    // url:"http://127.0.0.1:8042",
+ //   url:"http://127.0.0.1:8042",
    auth: {
        username: 'muteb',
         password: 'muteb'
@@ -221,10 +221,10 @@ const login_post=(req,res)=>{
 
     let name=req.body.name;
     let password=req.body.password;
-    let sql='select * from healthparactitioner where user= "'+name+'" and password="'+password+'"';
+    let sql='select * from healthparactitioner where user= ? and password=?';
 
 
-  connect.query(sql,(e,d)=>{
+  connect.query(sql,[name,password],(e,d)=>{
       if(d.length!=0){
          //res.render('index');
          
@@ -277,6 +277,27 @@ const login_post=(req,res)=>{
 
 }
 
+
+
+const Schedul_Timing_get=(req,res)=>{
+    var sql='SELECT * FROM healthparactitioner;';
+    connect.query(sql, function (err, data, fields) {
+    if (err) throw err;
+    let name=req.session.user_info;
+
+    let em_type=  req.session.type;
+    
+    if(em_type=='Administrative'){
+        res.render('Schedul_Timing', {msg :"",user: data,name});
+    }else{
+        res.redirect('login');
+    }
+   
+    
+  });
+}
+
+const Schedul_Timing_post=(req,res)=>{}
 
 
 
@@ -457,7 +478,7 @@ module.exports={
     x_ray_index,
     x_ray_order_get,
     x_ray_order_post,
-    
+    Schedul_Timing_get,
     Radiology_dr_get,
     Radiology_dr_post,
     index_dr,
